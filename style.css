@@ -79,13 +79,12 @@ html {
 
 /* Sezione parallax */
 .parallax {
-    background-image: url('heroPicture.png');
-    height: 100vh;
-    background-attachment: fixed;
+    background-image: url('heroPicture.png'); /* Assicurati che il percorso sia corretto */
+    height: 100vh; /* Assicurati che l'immagine sia abbastanza alta */
+    width: 100%; /* Aggiungi larghezza per garantire che si estenda a tutta la larghezza */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    background-size: cover; 
 }
 
 /* Sovrapposizione del testo */
