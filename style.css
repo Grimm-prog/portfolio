@@ -87,6 +87,12 @@ html {
     background-size: cover; 
 }
 
+@media only screen and (max-width: 600px) {
+    .parallax {
+        background-attachment: scroll; /* Disabilita l'effetto fixed per schermi piccoli */
+    }
+}
+
 /* Sovrapposizione del testo */
 .overlay {
     position: absolute;
