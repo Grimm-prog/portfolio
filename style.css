@@ -86,7 +86,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    width: 100vw; /* Assicura che la larghezza della sezione parallax sia il 100% della larghezza dello schermo */
+    width: 100%; /* Assicura che la larghezza della sezione parallax sia il 100% della larghezza dello schermo */
 }
 
 
