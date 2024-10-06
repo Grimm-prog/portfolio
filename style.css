@@ -79,7 +79,7 @@ html {
 
 /* Sezione parallax */
 .parallax {
-    background-image: url('/heroPicture.png');
+    background-image: url('heroPicture.png');
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
