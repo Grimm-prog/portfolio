@@ -1,0 +1,228 @@
+/*
+Verde (da una zona centrale dell'immagine): RGB (79, 128, 103)
+Nero dello sfondo (colori dominanti):
+RGB (1, 1, 1)
+RGB (20, 20, 20)
+RGB (13, 13, 13)
+*/
+
+/*
+Verde (79, 128, 103)
+Nero (1, 1, 1)
+Grigio scuro (20, 20, 20)
+*/
+
+/* Stile di colore grigio scuro*/
+.gray {
+    color: rgb (20, 20, 20);
+}
+
+
+/* Stili per il colore verde */
+.green {
+    color: rgb(79, 128, 103);
+    /* Colore verde */
+}
+
+/* Stili di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding e bordi nella larghezza e altezza dell'elemento */
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* sezione aggiuntiva per adattare la pagina alla grandezza dispositivo*/
+    height: 100%; /* Imposta l'altezza dell'intera pagina */
+    box-sizing: border-box; /* Migliora il ridimensionamento degli elementi */
+}
+
+/* Navbar */
+.navbar {
+    position: absolute; /* Posiziona la navbar sopra il parallax */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Sfondo trasparente */
+    padding: 20px;
+    display: flex; /* Abilita Flexbox */
+    justify-content: flex-end; /* Allinea gli elementi della navbar a destra */
+   z-index: 1000; /* Assicura che sia sempre visibile sopra altri elementi */
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white; /* Testo bianco */
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #4f8067; /* Cambia colore su hover al verde */
+}
+
+
+/* Sezione parallax */
+.parallax {
+    background-image: url('/heroPicture.png');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* aggiunta*/
+    position: relative;
+}
+
+/* Sovrapposizione del testo */
+.overlay {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    color: white;
+    text-align: left;
+}
+
+.overlay h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.overlay h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Sezione contenuto */
+.content {
+    /* prima configurazione
+    text-align: center;
+    padding: 100px 20px;
+    background-color: white;
+    */
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #010101; /* Nero RGB (1, 1, 1) */
+    color: white; /* Testo bianco */
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Stile bottone */
+.cta-button {
+    background-color: #4f8067; /* Colore verde */
+    color: white; /* Testo bianco */
+    border: none; /* Rimuovi il bordo predefinito */
+    padding: 10px 20px; /* Spaziatura interna */
+    border-radius: 20px; /* Bordo arrotondato */
+    font-size: 1rem; /* Dimensione del testo */
+    cursor: pointer; /* Cursore a mano al passaggio del mouse */
+    transition: background-color 0.3s ease; /* Transizione per l'hover */
+    margin-top: 30px; /* Margine sopra il bottone */
+}
+
+.cta-button:hover {
+    background-color: #3f7057; /* Colore verde più scuro al passaggio del mouse */
+}
+
+/* Stile sezione skills */
+
+.skills {
+    background-color: #000; /* Sfondo nero della sezione */
+    padding: 40px 10vw; /* Padding della sezione */
+    text-align: center; /* Centra il testo */
+}
+
+.skills h2 {
+    color: white; /* Colore del titolo principale */
+    margin-bottom: 20px; /* Margine inferiore del titolo principale */
+}
+
+.category {
+    margin-bottom: 40px; /* Margine tra le categorie */
+}
+
+.category h3 {
+    color: white; /* Colore del titolo della categoria */
+    margin-bottom: 15px; /* Margine inferiore del titolo della categoria */
+}
+
+.card-container {
+    display: flex; /* Abilita il layout flessibile per le card */
+    justify-content: space-around; /* Spaziatura uniforme tra le card */
+    flex-wrap: wrap; /* Permette la rottura su più righe se necessario */
+}
+
+.card {
+    background-color: #4f8067; /* Colore verde dello sfondo della card */
+    color: white; /* Colore del testo della card */
+    border-radius: 10px; /* Bordi arrotondati */
+    padding: 20px; /* Spaziatura interna */
+    width: 30%; /* Larghezza della card */
+    margin: 10px; /* Margine attorno alla card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra per la card */
+    transition: transform 0.3s; /* Transizione per l'hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Effetto zoom al passaggio del mouse */
+}
+
+
+/* Stile titolo e sottotitolo */
+
+.main-title {
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: bold; /* Grassetto */
+    margin-bottom: 20px; /* Margine inferiore */
+    text-align: center; /* Centra il testo */
+}
+
+.sub-title {
+    font-size: 1.2rem; /* Stessa dimensione di .content p */
+    color: #666; /* Stesso colore di .content p */
+    margin: 10px 0; /* Margini di esempio */
+    text-align: center; /* Centra il testo */
+}
+
+/* Stile dei link */
+
+.custom-link {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: white; /* Testo bianco */
+    font-size: 1.2rem; /* Dimensione del testo */
+    transition: color 0.3s ease; /* Transizione per il colore */
+}
+
+/* Opzionale: aggiungi uno stile per l'effetto hover */
+.custom-link:hover {
+    color: #e3e3e3; /* Colore del testo al passaggio del mouse */
+}
