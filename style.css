@@ -81,13 +81,15 @@ html {
 .parallax {
     background-image: url('heroPicture.png');
     height: 100vh; /* 100% dell'altezza dello schermo */
-    background-attachment: fixed;
+    background-attachment: fixed; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     width: 100vw; /* Assicura che la larghezza della sezione parallax sia il 100% della larghezza dello schermo */
 }
+
+
 
 /* Sovrapposizione del testo */
 .overlay {
