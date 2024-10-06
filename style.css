@@ -12,11 +12,10 @@ Nero (1, 1, 1)
 Grigio scuro (20, 20, 20)
 */
 
-/* Stile di colore grigio scuro*/
+/* Stile di colore grigio scuro */
 .gray {
-    color: rgb (20, 20, 20);
+    color: rgb(20, 20, 20);
 }
-
 
 /* Stili per il colore verde */
 .green {
@@ -39,7 +38,6 @@ html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    /* sezione aggiuntiva per adattare la pagina alla grandezza dispositivo*/
     height: 100%; /* Imposta l'altezza dell'intera pagina */
     box-sizing: border-box; /* Migliora il ridimensionamento degli elementi */
 }
@@ -54,7 +52,7 @@ html {
     padding: 20px;
     display: flex; /* Abilita Flexbox */
     justify-content: flex-end; /* Allinea gli elementi della navbar a destra */
-   z-index: 1000; /* Assicura che sia sempre visibile sopra altri elementi */
+    z-index: 1000; /* Assicura che sia sempre visibile sopra altri elementi */
 }
 
 .navbar ul {
@@ -79,7 +77,6 @@ html {
     color: #4f8067; /* Cambia colore su hover al verde */
 }
 
-
 /* Sezione parallax */
 .parallax {
     background-image: url('/heroPicture.png');
@@ -88,7 +85,6 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* aggiunta*/
     position: relative;
 }
 
@@ -113,11 +109,6 @@ html {
 
 /* Sezione contenuto */
 .content {
-    /* prima configurazione
-    text-align: center;
-    padding: 100px 20px;
-    background-color: white;
-    */
     text-align: center;
     padding: 100px 20px;
     background-color: #010101; /* Nero RGB (1, 1, 1) */
@@ -153,7 +144,6 @@ html {
 }
 
 /* Stile sezione skills */
-
 .skills {
     background-color: #000; /* Sfondo nero della sezione */
     padding: 40px 10vw; /* Padding della sezione */
@@ -176,17 +166,20 @@ html {
 
 .card-container {
     display: flex; /* Abilita il layout flessibile per le card */
-    justify-content: space-around; /* Spaziatura uniforme tra le card */
+    justify-content: center; /* Centra le card orizzontalmente */
     flex-wrap: wrap; /* Permette la rottura su più righe se necessario */
+    max-width: 1200px; /* Larghezza massima del contenitore delle card */
+    margin: 0 auto; /* Centra il contenitore delle card */
 }
 
 .card {
     background-color: #4f8067; /* Colore verde dello sfondo della card */
     color: white; /* Colore del testo della card */
     border-radius: 10px; /* Bordi arrotondati */
-    padding: 20px; /* Spaziatura interna */
-    width: 30%; /* Larghezza della card */
+    padding: 15px; /* Spaziatura interna */
     margin: 10px; /* Margine attorno alla card */
+    flex: 0 1 30%; /* Imposta la larghezza delle card per adattarsi in modo flessibile */
+    max-width: 300px; /* Larghezza massima della card */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra per la card */
     transition: transform 0.3s; /* Transizione per l'hover */
 }
@@ -195,9 +188,20 @@ html {
     transform: scale(1.05); /* Effetto zoom al passaggio del mouse */
 }
 
+/* Media query per schermi grandi */
+@media (min-width: 768px) {
+    .card {
+        flex: 0 1 20%; /* 5 card per riga su schermi medi e grandi */
+    }
+}
+
+@media (min-width: 992px) {
+    .card {
+        flex: 0 1 16%; /* 6 card per riga su schermi molto grandi */
+    }
+}
 
 /* Stile titolo e sottotitolo */
-
 .main-title {
     font-size: 3rem;
     color: #ffffff;
@@ -214,7 +218,6 @@ html {
 }
 
 /* Stile dei link */
-
 .custom-link {
     text-decoration: none; /* Rimuove la sottolineatura */
     color: white; /* Testo bianco */
