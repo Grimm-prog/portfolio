@@ -79,18 +79,13 @@ html {
 
 /* Sezione parallax */
 .parallax {
-    background-image: url('heroPicture.png'); /* Assicurati che il percorso sia corretto */
-    height: 100vh; /* Assicurati che l'immagine sia abbastanza alta */
-    width: 100%; /* Aggiungi larghezza per garantire che si estenda a tutta la larghezza */
+    background-image: url('heroPicture.png');
+    height: 100vh;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
-}
-
-@media only screen and (max-width: 600px) {
-    .parallax {
-        background-attachment: scroll; /* Disabilita l'effetto fixed per schermi piccoli */
-    }
+    background-size: cover;
+    position: relative;
 }
 
 /* Sovrapposizione del testo */
