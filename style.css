@@ -178,7 +178,7 @@ html {
 }
 
 .card {
-    background-color: #4f8067; /* Colore verde dello sfondo della card */
+    background-color:  rgb(79, 128, 103); /* Colore verde dello sfondo della card */
     color: white; /* Colore del testo della card */
     border-radius: 10px; /* Bordi arrotondati */
     padding: 15px; /* Spaziatura interna */
@@ -234,3 +234,15 @@ html {
 .custom-link:hover {
     color: #e3e3e3; /* Colore del testo al passaggio del mouse */
 }
+
+/* Sfondo per il footer */
+
+.green-background {
+    background-color: rgb(79, 128, 103); /* Colore verde */
+    color: white; /* Assicura che il testo sia bianco per contrasto */
+}
+
+.green-background p {
+    color: rgb(1, 1, 1); /* Colore nero per il testo dei paragrafi */
+}
+
