@@ -81,7 +81,7 @@ html {
 /* Sezione parallax */
 .parallax {
     background-image: url('heroPicture.png');
-    height: 100vh; /* 100% dell'altezza dello schermo */
+    height: 100vh;/* 100% dell'altezza dello schermo */
     background-attachment: fixed; 
     background-position: center;
     background-repeat: no-repeat;
@@ -89,6 +89,7 @@ html {
     position: relative;
     width: 100%; /* Assicura che la larghezza della sezione parallax sia il 100% della larghezza dello schermo */
 }
+
 
 
 
