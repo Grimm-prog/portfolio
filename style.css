@@ -150,62 +150,102 @@ html {
 }
 
 /* Stile sezione skills */
+
+/* Stile della sezione skills */
 .skills {
-    background-color: #000; /* Sfondo nero della sezione */
-    padding: 40px 10vw; /* Padding della sezione */
-    text-align: center; /* Centra il testo */
+    background-color: #010101; /* Sfondo nero */
+    padding: 50px 10vw; /* Spaziatura per la sezione */
+    text-align: center;
 }
 
-.skills h2 {
-    color: white; /* Colore del titolo principale */
-    margin-bottom: 20px; /* Margine inferiore del titolo principale */
+.skills h1 {
+    font-size: 4rem; /* Dimensione uguale a .overlay h1 */
+    color: white; /* Cambia colore a bianco per uniformità */
+    margin-bottom: 20px; /* Mantieni lo stesso margine di .overlay h1 */
 }
+
 
 .category {
-    margin-bottom: 40px; /* Margine tra le categorie */
+    margin-bottom: 50px; /* Spazio tra le categorie */
 }
 
 .category h3 {
-    color: white; /* Colore del titolo della categoria */
-    margin-bottom: 15px; /* Margine inferiore del titolo della categoria */
+    font-size: 1.8rem;
+    color: rgb(79, 128, 103); /* Colore verde per i sottotitoli */
+    margin-bottom: 20px;
 }
 
+/* Contenitore delle card */
 .card-container {
-    display: flex; /* Abilita il layout flessibile per le card */
-    justify-content: center; /* Centra le card orizzontalmente */
-    flex-wrap: wrap; /* Permette la rottura su più righe se necessario */
-    max-width: 1200px; /* Larghezza massima del contenitore delle card */
-    margin: 0 auto; /* Centra il contenitore delle card */
+    display: flex;
+    justify-content: space-around; /* Spaziatura tra le card */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.card {
-    background-color:  rgb(79, 128, 103); /* Colore verde dello sfondo della card */
-    color: white; /* Colore del testo della card */
-    border-radius: 10px; /* Bordi arrotondati */
-    padding: 15px; /* Spaziatura interna */
-    margin: 10px; /* Margine attorno alla card */
-    flex: 0 1 30%; /* Imposta la larghezza delle card per adattarsi in modo flessibile */
-    max-width: 300px; /* Larghezza massima della card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra per la card */
-    transition: transform 0.3s; /* Transizione per l'hover */
+/* Stile delle card */
+/* Sezione Skills */
+#skills {
+    padding: 50px 0;
+    background-color: #010101; /* Sfondo nero */
 }
 
-.card:hover {
-    transform: scale(1.05); /* Effetto zoom al passaggio del mouse */
+#skills h1 {
+    color: rgb(79, 128, 103); /* Colore verde */
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
-/* Media query per schermi grandi */
-@media (min-width: 768px) {
-    .card {
-        flex: 0 1 20%; /* 5 card per riga su schermi medi e grandi */
+/* Stile delle card */
+.custom-card {
+    background-color: #141414; /* Sfondo nero */
+    border: 2px solid rgb(79, 128, 103); /* Bordo verde */
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione per hover */
+    height: 350px; /* Altezza fissa per tutte le card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.custom-card:hover {
+    transform: scale(1.05); /* Zoom al passaggio del mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Ombra al passaggio del mouse */
+}
+
+.custom-card h4 {
+    font-size: 1.5rem;
+    color: rgb(79, 128, 103); /* Colore verde */
+    margin-bottom: 20px;
+}
+
+.custom-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.custom-card ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Media query per dispositivi mobili */
+@media (max-width: 768px) {
+    .custom-card {
+        margin-bottom: 20px;
+        width: 100%; /* Le card occupano tutta la larghezza su mobile */
+        height: auto; /* Altezza automatica su mobile */
+    }
+    
+    .row {
+        justify-content: center; /* Centra le card su dispositivi mobili */
     }
 }
 
-@media (min-width: 992px) {
-    .card {
-        flex: 0 1 16%; /* 6 card per riga su schermi molto grandi */
-    }
-}
+
 
 /* Stile titolo e sottotitolo */
 .main-title {
