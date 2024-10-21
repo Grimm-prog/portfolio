@@ -1,15 +1,20 @@
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-    if (entry.isIntersecting){
-        entry.target.classList.add('show');
-    } else {
-        entry.target.classList.remove('show');
-    }
+        if (entry.isIntersecting) {
+            // Aggiungi la classe 'show' se l'elemento è visibile
+            entry.target.classList.add('show');
+        } else {
+            // Rimuovi la classe 'show' se l'elemento non è visibile
+            entry.target.classList.remove('show');
+        }
     });
-
 });
 
-//prendo gli elementi della classe hidden
-const hiddenElements = document.querySelectorAll('.hidden');
-console.log(hiddenElements);
+// Seleziona la sezione contatti e applica la transizione orizzontale
+const contattiSection = document.querySelector('#contatti');
+contattiSection.classList.add('slide-in'); // Aggiungi la classe slide-in per la sezione contatti
+observer.observe(contattiSection);
+
+// Seleziona le sezioni che devono avere la transizione verticale
+const hiddenElements = document.querySelectorAll('.hidden:not(#contatti)');
 hiddenElements.forEach((el) => observer.observe(el));

@@ -301,3 +301,15 @@ html {
     transform: translateY(0); /* Riporta alla posizione originale */
 }
 
+/* Stile per la transizione orizzontale */
+.slide-in {
+    transform: translateX(-100%); /* Inizia completamente a sinistra */
+    opacity: 0; /* Inizia invisibile */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transizione per trasformazione e opacità */
+}
+
+.slide-in.show {
+    transform: translateX(0); /* Porta l'elemento nella posizione originale */
+    opacity: 1; /* Rendi visibile */
+}
+
