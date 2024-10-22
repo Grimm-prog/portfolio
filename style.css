@@ -90,7 +90,11 @@ html {
     width: 100%; /* Assicura che la larghezza della sezione parallax sia il 100% della larghezza dello schermo */
 }
 
-
+@media only screen and (max-device-width: 1024px) {
+    .parallax {
+      background-attachment: scroll; /* O cambia con un'immagine fissa */
+    }
+  }
 
 
 /* Sovrapposizione del testo */
