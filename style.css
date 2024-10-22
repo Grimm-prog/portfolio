@@ -92,9 +92,11 @@ html {
 
 @media only screen and (max-device-width: 1024px) {
     .parallax {
-      background-attachment: scroll; /* O cambia con un'immagine fissa */
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
     }
-  }
+}
 
 
 /* Sovrapposizione del testo */
