@@ -18,3 +18,12 @@ observer.observe(contattiSection);
 // Seleziona le sezioni che devono avere la transizione verticale
 const hiddenElements = document.querySelectorAll('.hidden:not(#contatti)');
 hiddenElements.forEach((el) => observer.observe(el));
+
+
+window.addEventListener('scroll', function() {
+    const parallax = document.querySelector('.parallax');
+    let scrollPosition = window.pageYOffset;
+
+    // Regola il fattore di movimento per l'effetto
+    parallax.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
+});

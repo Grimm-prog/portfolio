@@ -45,7 +45,7 @@ html {
 
 /* Navbar */
 .navbar {
-    position: absolute; /* Posiziona la navbar sopra il parallax */
+    position: fixed; /* Posiziona la navbar sopra il parallax */
     top: 0;
     left: 0;
     width: 100%;
@@ -88,13 +88,26 @@ html {
     background-size: cover;
     position: relative;
     width: 100%; 
+    z-index: 1;
 }
+.parallax {
+    transform: translate3d(0, 0, 0); /* Forza il rendering su iOS */
+}
+
 
 @media only screen and (max-device-width: 1024px) {
     .parallax {
         background-attachment: scroll;
         background-size: cover;
         background-position: center;
+    }
+}
+
+@media only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait), 
+only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .parallax {
+        background-attachment: scroll; /* Su iOS cambia in 'scroll' */
+        transform: translate3d(0, 0, 0); /* Forza rendering su iOS */
     }
 }
 
@@ -107,6 +120,7 @@ html {
     color: white;
     text-align: left;
     width: 80%; /* Assicura che il contenuto non ecceda la larghezza dello schermo */
+    z-index: 2;
 }
 
 .overlay h1 {
@@ -125,6 +139,8 @@ html {
     padding: 100px 20px;
     background-color: #010101; /* Nero RGB (1, 1, 1) */
     color: white; /* Testo bianco */
+    z-index: 3;
+    position: relative;
 }
 
 .content h1 {
