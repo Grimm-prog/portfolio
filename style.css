@@ -335,3 +335,20 @@ only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 
     opacity: 1; /* Rendi visibile */
 }
 
+/* bottone outline */
+.cta-button-outline {
+    background-color: transparent; /* Trasparente */
+    color: #4f8067; /* Testo verde */
+    border: 2px solid #4f8067; /* Bordo verde */
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transizioni */
+    margin-top: 30px;
+}
+
+.cta-button-outline:hover {
+    background-color: #4f8067; /* Verde di sfondo al passaggio del mouse */
+    color: white; /* Testo bianco al passaggio del mouse */
+}
