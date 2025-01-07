@@ -43,6 +43,7 @@ html {
     box-sizing: border-box; /* Migliora il ridimensionamento degli elementi */
 }
 
+
 /* Navbar */
 .navbar {
     position: fixed; /* Posiziona la navbar sopra il parallax */
