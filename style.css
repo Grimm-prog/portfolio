@@ -80,7 +80,7 @@ html {
 
 /* Sezione parallax */
 .parallax {
-    background-image: url('heroPicture.png');
+    background-image:linear-gradient(0deg, rgba(0,0,0,0.8), rgba(0,0,0, 0.6)), url('heroPicture.png');
     height: 100vh;
     background-attachment: fixed; 
     background-position: center;
