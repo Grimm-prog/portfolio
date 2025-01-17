@@ -41,6 +41,7 @@ html {
     font-family: Arial, sans-serif;
     height: 100%; /* Imposta l'altezza dell'intera pagina */
     box-sizing: border-box; /* Migliora il ridimensionamento degli elementi */
+    background: #fff;
 }
 
 
@@ -55,6 +56,8 @@ html {
     display: flex; /* Abilita Flexbox */
     justify-content: flex-end; /* Allinea gli elementi della navbar a destra */
     z-index: 1000; /* Assicura che sia sempre visibile sopra altri elementi */
+    mix-blend-mode: difference;
+    color:#fff;
 }
 
 .navbar ul {
