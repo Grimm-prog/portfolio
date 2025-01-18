@@ -44,43 +44,112 @@ html {
     background: #fff;
 }
 
+a {
+    text-decoration: none;
+}
 
-/* Navbar */
-.navbar {
-    position: fixed; /* Posiziona la navbar sopra il parallax */
-    top: 0;
-    left: 0;
+a:hover {
+    text-decoration: none;
+    background: #4f8067;; /* Colore pieno */
+    transform: scale(1.1); /* Leggero ingrandimento */
+    box-shadow: 0 10px 20px rgba(79,129,103, 0.5);  /* Ombra */
+    border-radius: 50px 0;
+    color:#fff;
+}
+
+/* menu */
+.header {
     width: 100%;
-    background-color: transparent; /* Sfondo trasparente */
-    padding: 20px;
-    display: flex; /* Abilita Flexbox */
-    justify-content: flex-end; /* Allinea gli elementi della navbar a destra */
-    z-index: 1000; /* Assicura che sia sempre visibile sopra altri elementi */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /*centra l'elemento*/
+    padding: 30px;
+    display: flex;
+    max-width: 1350px;
     mix-blend-mode: difference;
     color:#fff;
 }
 
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.logo {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
 }
 
-.navbar ul li {
-    display: inline;
-    margin-right: 30px;
+.menu {
+    width: 100%;
+    z-index: 0;
 }
 
-.navbar ul li a {
-    text-decoration: none;
-    color: white; /* Testo bianco */
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+.menu li {
+    display: inline-block;
 }
 
-.navbar ul li a:hover {
-    color: #4f8067; /* Cambia colore su hover al verde */
+/* per allineare i link in orizzontale */
+.menu li a {
+    color: white;
+    padding: 20px;
+    display: block;
 }
+
+/* per colorare i link nel menu e con display:block centrarli sulla linea orizzontale */
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .cta {
+        display: none;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        background: #010101;
+        height: 100vh;
+        padding-top: 80px;
+    }
+
+    .menu li {
+        display: block;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 40px;
+        right: 30px;
+    }
+
+    .hamburger span {
+        width: 100%;
+        background: white;
+        height: 2px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .menu--open {
+        right: 0%;
+    }
+    a:hover{
+        border-radius: 0;
+    }
+
+    .header {
+        mix-blend-mode: normal;
+    }
+
+}
+
 
 /* Sezione parallax */
 .parallax {
@@ -162,9 +231,10 @@ only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 
 .cta-button {
     background-color: #4f8067; /* Colore verde */
     color: white; /* Testo bianco */
+    text-transform: uppercase; /* Testo maiuscolo */
     border: none; /* Rimuovi il bordo predefinito */
-    padding: 10px 20px; /* Spaziatura interna */
-    border-radius: 20px; /* Bordo arrotondato */
+    padding: 18px 20px; /* Spaziatura interna */
+    border-radius: 50px 0; /* Bordo arrotondato */
     font-size: 1rem; /* Dimensione del testo */
     cursor: pointer; /* Cursore a mano al passaggio del mouse */
     transition: background-color 0.3s ease; /* Transizione per l'hover */
@@ -172,7 +242,9 @@ only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 
 }
 
 .cta-button:hover {
-    background-color: #3f7057; /* Colore verde più scuro al passaggio del mouse */
+    background: rgba(79,129, 103, 5); /* Colore pieno */
+    transform: scale(1.1); /* Leggero ingrandimento */
+    box-shadow: 0 10px 20px rgba(79,129,103, 0.5); /* Ombra */
 }
 
 /* Stile sezione skills */
@@ -344,8 +416,9 @@ only screen and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 
     background-color: transparent; /* Trasparente */
     color: #4f8067; /* Testo verde */
     border: 2px solid #4f8067; /* Bordo verde */
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 18px 28px;
+    text-transform: uppercase;
+    border-radius: 50px 0;
     font-size: 1rem;
     cursor: pointer;
     transition: color 0.3s ease, background-color 0.3s ease; /* Transizioni */
