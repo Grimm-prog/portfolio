@@ -71,6 +71,7 @@ a:hover {
     max-width: 1350px;
     mix-blend-mode: difference;
     color:#fff;
+    text-align: right;
 }
 
 .logo {
